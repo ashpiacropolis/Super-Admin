@@ -38,3 +38,6 @@
     text-decoration: none;
     color: whitesmoke;
 }
+.edit-button:focus{
+    background-color: gray;
+}

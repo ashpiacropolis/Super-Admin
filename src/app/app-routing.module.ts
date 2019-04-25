@@ -21,92 +21,181 @@ import { ProvideJoComponent } from './provide-jo/provide-jo.component';
 import { SmsComponent } from './sms/sms.component';
 import { EditsmsComponent } from './editsms/editsms.component';
 import { AgentslistComponent } from './agentslist/agentslist.component';
+import { FirstpageComponent } from './firstpage/firstpage.component';
+import { LoginComponent } from './login/login.component';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ApplicantprofileComponent } from './applicantprofile/applicantprofile.component';
+import { ApplicantPremedComponent } from './applicant-premed/applicant-premed.component';
+import { ApplicantPassportComponent } from './applicant-passport/applicant-passport.component';
+import { ApplicantMedicalComponent } from './applicant-medical/applicant-medical.component';
+import { ApplicantTesdaComponent } from './applicant-tesda/applicant-tesda.component';
+import { ApplicantJoHandlerComponent } from './applicant-jo-handler/applicant-jo-handler.component';
+import { ApplicantdetailsComponent } from './applicantdetails/applicantdetails.component';
+import { SearchapplicantComponent } from './searchapplicant/searchapplicant.component';
+import { JodetailsComponent } from './jodetails/jodetails.component';
+import { EditapplicantComponent } from './editapplicant/editapplicant.component';
 
 const routes: Routes = [
-{
-	path: 'home',
-	component:HomeComponent
-},
-{
-	path: 'editprofile',
-	component:EditprofileComponent
-},
-{
-	path: 'agents',
-	component:AgentsComponent
-},
-{
-	path: 'addagent',
-	component:AddagentComponent
-},
-{
-	path: 'agentdetail',
-	component:AgentdetailComponent
-},
-{
-	path: 'applicants',
-	component:ApplicantsComponent
-},
-{
-	path: 'addapplicant',
-	component:AddapplicantComponent
-},
-{
-	path: 'branches',
-	component:BranchesComponent
-},
-{
-	path: 'branchedetails',
-	component:BranchdetailsComponent
-},
-{
-	path: 'editbranch',
-	component:EditbranchComponent
-},
-{
-	path: 'addbranch',
-	component:AddbranchComponent
-},
-{
-	path: 'accounts',
-	component:AccountsComponent
-},
-{
-	path: 'accountdetail',
-	component:AccountdetailsComponent
-},
-{
-	path: 'editaccount',
-	component:EditaccountComponent
-},
-{
-	path: 'addaccount',
-	component: AddaccountComponent
-},
-{
-	path: 'johandlers',
-	component: JoHandlersComponent
-},
-{
-	path: 'addjo',
-	component: AddJoHandlersComponent
-},
-{
-	path: 'providejo',
-	component: ProvideJoComponent
-},
-{
-	path: 'sms',
-	component: SmsComponent
-},
-{
-	path: 'editsms',
-	component: EditsmsComponent
-},
-{
-	path: 'agentlist',
-	component: AgentslistComponent
-},
+	
+	{
+		path: '',
+		component: LoginComponent
+	},
+	{
+		path: 'login',
+		component: LoginComponent
+	},
+	{
+		path: 'first',
+		component: FirstpageComponent,
+		children:[
+			{
+			  path:'',
+			  component: DashboardComponent,
+			},
+				  {
+			  		  path:'home',
+			  		  component:HomeComponent,
+				  },
+				  {
+					  path: 'editprofile',
+					  component: EditprofileComponent
+				  },
+				  {
+					  path: 'changepassword',
+					  component: ChangepasswordComponent
+				  },
+				  {
+					path: 'agents',
+					component:AgentsComponent
+				},
+				{
+					path: 'addagent',
+					component:AddagentComponent
+				},
+				{
+					path: 'agentlist',
+					component: AgentslistComponent
+				},
+				{
+					path: 'agentdetail',
+					component:AgentdetailComponent
+				},
+				{
+					path: 'applicants',
+					component:ApplicantsComponent
+				},
+				{
+					path: 'addapplicant',
+					component:AddapplicantComponent
+				},
+				{
+					path:'searchapplicant',
+					component: SearchapplicantComponent
+				},
+				{
+					path: 'branches',
+					component:BranchesComponent
+				},		
+				{
+					path: 'branchedetails',
+					component:BranchdetailsComponent
+				},	
+				{
+					path: 'editbranch',
+					component:EditbranchComponent
+				},					
+				{
+					path: 'addbranch',
+					component:AddbranchComponent
+				},
+				{
+					path: 'accounts',
+					component:AccountsComponent
+				},
+				{
+					path: 'accountdetail',
+					component:AccountdetailsComponent
+				},
+				{
+					path: 'addaccount',
+					component: AddaccountComponent
+				},
+				{
+					path: 'editaccount',
+					component:EditaccountComponent
+				},
+				{
+					path: 'johandlers',
+					component: JoHandlersComponent
+				},
+				{
+					path: 'jodetails',
+					component: JodetailsComponent	
+				},
+				{
+					path: 'addjo',
+					component: AddJoHandlersComponent
+				},
+				{
+					path: 'providejo',
+					component: ProvideJoComponent
+				},
+				{
+					path: 'sms',
+					component: SmsComponent
+				},
+				{
+					path: 'editsms',
+					component: EditsmsComponent
+				},
+				{
+					path: 'applicantprofile',
+					component: ApplicantprofileComponent,
+					children:[
+						{
+							path:'',
+							component: ApplicantdetailsComponent
+						},
+						{
+							path: 'applicantPremed',
+							component: ApplicantPremedComponent	
+						},
+						{
+							path: 'applicantdetails',
+							component: ApplicantdetailsComponent
+						},
+						{
+							path: 'applicantPremed',
+							component: ApplicantPremedComponent	
+						},
+						{
+							path: 'applicantPassport',
+							component: ApplicantPassportComponent
+						},
+						{
+							path: 'applicantMedical',
+							component: ApplicantMedicalComponent
+						},
+						{
+							path: 'applicantTesda',
+							component: ApplicantTesdaComponent
+						},
+						{
+							path: 'applicantJoHandler',
+							component: ApplicantJoHandlerComponent
+						},
+						{
+							path: 'editapplicant',
+							component: EditapplicantComponent
+						},
+		
+					]
+				},
+				
+			]	
+	},	
 ];
 
 @NgModule({

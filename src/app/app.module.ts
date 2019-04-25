@@ -26,6 +26,23 @@ import { ProvideJoComponent } from './provide-jo/provide-jo.component';
 import { SmsComponent } from './sms/sms.component';
 import { EditsmsComponent } from './editsms/editsms.component';
 import { AgentslistComponent } from './agentslist/agentslist.component';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
+import { LoginComponent } from './login/login.component'; 
+import { FirstpageComponent } from './firstpage/firstpage.component';
+import { EditjoComponent } from './editjo/editjo.component';
+import { ApplicantdetailsComponent } from './applicantdetails/applicantdetails.component';
+import { EditagentComponent } from './editagent/editagent.component';
+import { EditapplicantComponent } from './editapplicant/editapplicant.component';
+import { SearchapplicantComponent } from './searchapplicant/searchapplicant.component';
+import { JodetailsComponent } from './jodetails/jodetails.component';
+import { FooterComponent } from './footer/footer.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ApplicantprofileComponent } from './applicantprofile/applicantprofile.component';
+import { ApplicantPremedComponent } from './applicant-premed/applicant-premed.component';
+import { ApplicantPassportComponent } from './applicant-passport/applicant-passport.component';
+import { ApplicantMedicalComponent } from './applicant-medical/applicant-medical.component';
+import { ApplicantTesdaComponent } from './applicant-tesda/applicant-tesda.component';
+import { ApplicantJoHandlerComponent } from './applicant-jo-handler/applicant-jo-handler.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +69,24 @@ import { AgentslistComponent } from './agentslist/agentslist.component';
     ProvideJoComponent,
     SmsComponent,
     EditsmsComponent,
-    AgentslistComponent
+    AgentslistComponent,
+    ChangepasswordComponent,
+    LoginComponent,
+    FirstpageComponent,
+    EditjoComponent,
+    ApplicantdetailsComponent,
+    EditagentComponent,
+    EditapplicantComponent,
+    SearchapplicantComponent,
+    JodetailsComponent,
+    FooterComponent,
+    DashboardComponent,
+    ApplicantprofileComponent,
+    ApplicantPremedComponent,
+    ApplicantPassportComponent,
+    ApplicantMedicalComponent,
+    ApplicantTesdaComponent,
+    ApplicantJoHandlerComponent
   ],
   imports: [
     BrowserModule,
